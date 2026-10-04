@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sirius Energy Solutions Limited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--dk:#2a1608;--or:#e8650a;--ac:#b94a05;--bg:#fff;--soft:#fff4ec;--ph:#fde3cf;--pt:#8a4a1f;--tx:#2b1d12;--mu:#6e5a4a;--bd:#f0dccb;--lk:#b94a05;--card:#fff;--hd:#3a1a06}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a120c;--soft:#231810;--ph:#3a2415;--pt:#f0b88a;--tx:#f6ebe2;--mu:#c9b3a0;--bd:#45301f;--lk:#ffa566;--card:#2a1c12;--hd:#f6ebe2}}
+:root[data-theme="dark"]{--bg:#1a120c;--soft:#231810;--ph:#3a2415;--pt:#f0b88a;--tx:#f6ebe2;--mu:#c9b3a0;--bd:#45301f;--lk:#ffa566;--card:#2a1c12;--hd:#f6ebe2}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0 .5em;color:var(--hd)}
+.w{max-width:1100px;margin:0 auto;padding:0 20px}a{color:var(--lk)}
+.top{background:var(--dk);color:#fff;font-size:13px;padding:8px 0}.top .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+header{background:var(--bg);border-bottom:3px solid var(--or);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header .w{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap;gap:10px}
+.logo{font:700 22px Georgia,serif;color:var(--hd);text-decoration:none}.logo small{display:block;font:11px system-ui;letter-spacing:.12em;color:var(--mu)}.logo i{color:var(--or);font-style:normal}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}nav a{color:var(--tx);text-decoration:none;font-weight:500;font-size:15px}nav a.on{color:var(--ac)}
+.btn{display:inline-block;background:var(--ac);color:#fff!important;padding:11px 20px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--ac);cursor:pointer;font-size:15px}
+.hero .btn{background:var(--dk);border-color:var(--dk)}.hero .btn.o{background:transparent;border-color:#fff}
+.hero{background:linear-gradient(135deg,#e8650a,#a63d04);color:#fff;padding:64px 0}.hero h1{color:#fff;font-size:clamp(34px,5vw,54px)}
+.hero .g{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:700;text-transform:uppercase;color:#ffe3cc}
+.ph{background:var(--ph);color:var(--pt);display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;padding:12px;border-radius:8px;min-height:200px}
+.hero .ph{background:rgba(255,255,255,.18);color:#fff;min-height:320px}
+.stats{background:var(--soft);padding:32px 0}.stats .w,.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stats b{font:700 22px Georgia,serif;color:var(--ac);display:block}.stats span{color:var(--mu);font-size:14px}
+section{padding:64px 0}section.s{background:var(--soft)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:22px;border-top:3px solid var(--or)}.card.p{padding:0;overflow:hidden}.card.p .b{padding:18px}
+.card .n{color:var(--ac);font-size:12px;font-weight:700;letter-spacing:.1em}.card.p .ph{border-radius:0}
+.list{padding-left:18px;margin:8px 0 0}.list li{margin:3px 0}
+.cta{background:var(--dk);color:#fff;border-radius:8px;padding:22px}.cta h3{color:#fff}.cta .btn{background:var(--or);border-color:var(--or)}
+.mu{color:var(--mu)}.tag{font-size:12px;color:var(--mu)}
+.page-h{background:linear-gradient(135deg,#e8650a,#a63d04);color:#fff;padding:48px 0}.page-h h1{color:#fff;margin:0}.page-h p{color:#ffe9d9;margin:8px 0 0}
+.contact{background:var(--dk);color:#fff}.contact h2{color:#fff}
+form{background:var(--card);color:var(--tx);padding:22px;border-radius:8px}
+label{display:block;font-size:14px;font-weight:600;margin:12px 0 4px}
+input,textarea{width:100%;padding:10px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:inherit}
+footer{background:#1c0e04;color:#e8d6c6;padding:32px 0;font-size:14px}footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:#ffb27a;margin-right:12px}
+@media(max-width:800px){.hero .g,.two,.grid3,.grid2{grid-template-columns:1fr}.stats .w,.grid4{grid-template-columns:1fr 1fr}}
+.w{max-width:1160px}
+body{font-size:16px;line-height:1.7}
+h1,h2,h3{letter-spacing:-.025em}
+h2{font-size:clamp(28px,3vw,38px)}
+body{font-family:"DM Sans",Inter,"Segoe UI",sans-serif;letter-spacing:-.01em}
+h1,h2,h3,.logo,.stats b{font-family:Manrope,"Segoe UI",sans-serif}
+h1,h2,h3{letter-spacing:-.045em}
+h2{line-height:1.16}
+p{max-width:70ch}
+nav a,.btn{letter-spacing:.005em}
+.top{background:#211207}
+header{box-shadow:0 8px 24px rgba(42,22,8,.08)}
+header .w{min-height:82px}
+nav{gap:clamp(12px,1.8vw,22px)}
+nav a{transition:color .2s ease}
+nav a:hover,nav a.on{color:var(--or)}
+.btn{border-radius:999px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(42,22,8,.18)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#321704 0%,#9f3e06 58%,#e8650a 100%);padding:clamp(58px,8vw,96px) 0}
+.hero:before{content:"";position:absolute;width:460px;height:460px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-100px;top:-180px}
+.hero .w{position:relative}
+.hero .g{gap:clamp(28px,5vw,64px)}
+.hero .g>div:first-child{max-width:600px}
+.hero h1{font-size:clamp(40px,5.5vw,66px);letter-spacing:-.055em;line-height:1.04}
+.hero p{color:#fff3e9}
+.eyebrow{letter-spacing:.17em}
+.image-frame{position:relative;overflow:hidden;min-height:200px;border-radius:16px;background:linear-gradient(135deg,#f3a461,#71300c);box-shadow:0 18px 45px rgba(42,22,8,.16);isolation:isolate}
+.image-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.image-frame:hover img{transform:scale(1.035)}
+.hero .image-frame{min-height:340px;border:1px solid rgba(255,255,255,.3);box-shadow:0 24px 60px rgba(20,8,1,.3)}
+.image-frame:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(27,13,4,.28));z-index:1;pointer-events:none}
+.image-frame.image-failed:before{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:#fff;font-weight:700;z-index:2}
+.stats{padding:26px 0}
+.stats .w{gap:18px}
+.stats .w>div{padding:6px 16px;border-left:2px solid var(--or)}
+section{padding:clamp(52px,7vw,82px) 0}
+.card{border-radius:16px;box-shadow:0 8px 28px rgba(42,22,8,.045);transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(42,22,8,.11)}
+.card h3{letter-spacing:-.035em}
+.s{background:linear-gradient(180deg,var(--soft),color-mix(in srgb,var(--soft) 55%,var(--bg)))}
+.card.p{border-top:0}
+.card.p .image-frame{border-radius:0;box-shadow:none}
+.card.p .b{padding:22px}
+.cta{border-radius:14px;padding:26px;background:linear-gradient(145deg,#2a1608,#4d260d)}
+.page-h{background:linear-gradient(115deg,#321704,#b94a05);padding:clamp(50px,7vw,78px) 0}
+.page-h h1{font-size:clamp(36px,5vw,54px)}
+form{border:1px solid rgba(255,255,255,.12);border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.2)}
+input,textarea{margin-top:3px}
+input:focus,textarea:focus{outline:3px solid rgba(232,101,10,.2);border-color:var(--or)}
+footer{background:#160b04}
+@media(max-width:800px){.hero .image-frame{min-height:270px}.stats .w>div{padding:8px 12px}}
+@media(max-width:560px){.w{padding-left:18px;padding-right:18px}.top .w{font-size:12px}header .w{align-items:flex-start}.logo{font-size:20px}nav{gap:10px}nav a{font-size:13px}.hero .btn{margin-bottom:8px}.stats .w,.grid4{gap:14px}.stats b{font-size:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+.team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.team-grid.detailed{grid-template-columns:repeat(3,minmax(0,1fr))}
+.team-card{padding:0;overflow:hidden;display:flex;flex-direction:column;border-top:0}
+.team-card .image-frame,.portrait-placeholder{height:230px;min-height:230px;border-radius:0;box-shadow:none}
+.team-card .image-frame{flex:none}
+.portrait-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(145deg,#f4e2d2,#ead0b8);color:#804116;text-align:center}
+.portrait-placeholder span{font:800 40px Manrope,sans-serif;letter-spacing:-.06em}
+.portrait-placeholder small{font-size:12px}
+.team-card-content{padding:20px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex:1}
+.team-card h3{margin:0;font-size:20px}
+.team-role{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac)}
+.team-experience{font-size:13px;color:var(--mu);font-weight:600}
+.team-card p{margin:0;font-size:14px}
+.team-details{width:100%;border-top:1px solid var(--bd);padding-top:12px;margin-top:2px}
+.team-details b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ac);margin:8px 0 2px}
+.team-details span{font-size:13px;color:var(--mu)}
+.project-note{margin:0 0 24px;padding:14px 18px;border-left:3px solid var(--or);background:var(--soft);color:var(--mu);border-radius:0 10px 10px 0}
+@media(max-width:960px){.team-grid,.team-grid.detailed{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.team-grid,.team-grid.detailed{grid-template-columns:1fr}.team-card .image-frame,.portrait-placeholder{height:260px;min-height:260px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="w"><span>Warehouse No. 8, Vipro Go-downs, Eastern Bypass (Corner), Ruiru, Kenya</span><span>Petroleum · Energy · Operations</span></div></div>
+<header><div class="w">
+<a class="logo" href="#home">Sirius <i>Energy</i> Solutions<small>LIMITED</small></a>
+<nav id="nav"></nav></div></header>
+<main id="app"></main>
+<footer><div class="w"><div><b style="color:#fff">Sirius Energy Solutions Limited</b><br>Technical and business consulting for the petroleum sector<br><br>© 2026 Sirius Energy Solutions Limited. All rights reserved.</div>
+<div><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#team">Team</a><a href="#contact">Contact</a></div></div></footer>
+<script>
+const IMAGES={
+  'hero-energy-site':{file:'hero-energy-site.jpg',url:'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1400&q=85',alt:'Fuel transport truck at an energy facility'},
+  'team-on-site':{file:'team-on-site.jpg',url:'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85',alt:'Energy professionals collaborating on site'},
+  'service-petroleum-consulting':{file:'petroleum-consulting.jpg',url:'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=85',alt:'Petroleum industry infrastructure'},
+  'service-energy-solutions':{file:'energy-solutions.jpg',url:'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85',alt:'Solar panels providing an energy solution'},
+  'service-operations-support':{file:'operations-support.jpg',url:'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85',alt:'Technical operations and equipment support'},
+  'project-1':{file:'project-1.jpg',url:'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000&q=85',alt:'Fuel logistics project'},
+  'wind-farm-experience':{file:'wind-farm-experience.jpg',url:'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1000&q=85',alt:'Wind turbines across an open field at sunset'},
+  'project-3':{file:'project-3.jpg',url:'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85',alt:'Commercial infrastructure project'},
+  'ruto-lyoba':{file:'SES-Ruto-Lyoba.jpg',url:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85',alt:'Ruto Lyoba, Managing Director'},
+  'albert-onyango':{file:'SES-Albert-Onyango.jpg',url:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85',alt:'Albert J. Onyango, Operations Director'},
+  'peter-muiruri':{file:'SES-Peter-Muiruri.jpg',url:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85',alt:'Peter Muiruri, Technical Director'},
+  'malcolm-marega':{file:'SES-Malcolm-Marega.jpg',url:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85',alt:'Malcolm Marega, Business Development Manager'},
+  'nickson-daudi':{file:'SES-Nickson-Daudi.jpg',url:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85',alt:'Nickson Daudi, Technical Lead for Solids Control'},
+  'noah-abdalla':{file:'SES-Noah-Abdalla-Web-Profile-Photo-e1571387830908.jpg',url:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85',alt:'Noah M. Abdalla, Project Supervisor for Solids Control'},
+  'alex-kibe':{file:'SES-Alex-Kibe.jpg',url:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85',alt:'Alex Kibe, Project Supervisor for Solids Control'}
+};
+function imageFallback(img){
+  if(!img.dataset.fallbackTried){img.dataset.fallbackTried='true';img.src=img.dataset.fallback;return}
+  img.parentElement.classList.add('image-failed');img.remove();
+}
+const P=(key,h)=>{const image=IMAGES[key];return `<div class="image-frame" data-label="${image.alt}" style="${h?'min-height:'+h+'px':''}"><img src="${image.file}" data-fallback="${image.url}" alt="${image.alt}" loading="lazy" onerror="imageFallback(this)"></div>`};
+const S=[
+{n:'01',t:'Petroleum & Business Advisory',d:'Technical and business insight for petroleum-sector organisations, grounded in hands-on industry experience.',l:['Technical and market advisory','Business development and opportunity assessment','SME and project support','Energy-sector consulting']},
+{n:'02',t:'Technical Field Services',d:'Specialist field capabilities across solids control, drilling-waste management, water engineering and equipment support.',l:['Solids control and drilling-waste management','Filtration, dewatering and water engineering','Equipment maintenance and field supervision','Environmental and HSE support']},
+{n:'03',t:'Operations, Logistics & HSE',d:'Practical coordination for projects that depend on safe operations, supply-chain planning and dependable delivery.',l:['Transport and supply-chain planning','Port-to-site logistics and customs coordination','Project supervision and inventory management','Health, safety and environmental management']}];
+const W=[['Sector expertise','Technical and business insight into the petroleum sector.'],['Confidential by design','Client information is handled with strict discretion.'],['Practical delivery','Solutions built for real operating conditions.'],['Kenyan-based','Registered in Kenya with a base in Ruiru.'],['Client-focused','We start from your goals and work back.'],['Flexible engagement','Advisory, project or ongoing support models.']];
+const PR=[
+  ['Selected team experience · 2016–17','Lake Turkana wind farm logistics','A.J. Onyango oversaw end-to-end transport logistics, customs compliance and in-country budget for components used to install 365 turbines.','wind-farm-experience'],
+  ['Selected team experience · Kenya','Oilfield service logistics','A.J. Onyango helped design and execute oilfield logistics plans, coordinating port-to-site delivery for multiple service lines and operators.','project-1'],
+  ['Selected team experience · Kenya','Wellsite solids control','The team profiles document solids-control, drilling-waste management and operations experience across Turkana and Lamu projects.','project-3']
+];
+const T=[
+  {name:'Ruto Lyoba',role:'Managing Director',image:'ruto-lyoba',initials:'RL',experience:'25+ years in the industry',bio:'Mechanical engineer and energy-sector leader with experience at ExxonMobil in Belgium and Ghana, Total and National Oilwell Varco.',education:'BSc Mechanical Engineering (Hons), University of Nairobi; enterprise leadership training, INSEAD.'},
+  {name:'Albert J. Onyango',role:'Operations Director',image:'albert-onyango',initials:'AO',experience:'20+ years in logistics and supply chain',bio:'Led logistics for the delivery of components for 365 Lake Turkana wind turbines, including end-to-end transport, customs compliance and budget oversight.',education:'BA, University of Nairobi; postgraduate diploma in Operations and Supply Chain Management, University of Liverpool.'},
+  {name:'Peter Muiruri',role:'Technical Director',image:'peter-muiruri',initials:'PM',experience:'10+ years across water and field engineering',bio:'Technical experience spans mud engineering, solids-control equipment, borehole drilling, water engineering, development and environmental impact assessment.',education:'MSc Water Resources and Environmental Management, University of Twente; BSc Water Engineering (Hons), Kenyatta University.'},
+  {name:'Brenda Omuombo',role:'HSE Advisor',initials:'BO',experience:'6+ years in HSE and environmental management',bio:'HSE and environmental management professional with experience including an HSE advisory role with Tullow Oil BV.',education:'MSc Energy and Environmental Management, University of Abertay Dundee; BSc Environmental Science, Maseno University.'},
+  {name:'Malcolm Marega',role:'Business Development Manager',image:'malcolm-marega',initials:'MM',experience:'15+ years in business development and management',bio:'Experience includes business development, SME development and renewable energy in the UK.',education:'BA Business Management (UK).'},
+  {name:'Nickson Daudi',role:'Technical Lead, Solids Control',image:'nickson-daudi',initials:'ND',experience:'Experienced oilfield and solids-control specialist',bio:'Specialises in drilling-waste management, filtration, solids-control equipment maintenance and dewatering. His project experience includes wellsite work in Turkana and Lamu.',education:'Diploma in Chemical and Process Engineering, Technical University of Kenya.'},
+  {name:'Noah M. Abdalla',role:'Project Supervisor, Solids Control',image:'noah-abdalla',initials:'NA',experience:'6+ years in operations and maintenance',bio:'Mechanical engineering technician with oil-and-gas, thermal-power and food-processing experience, including solids control, drill-waste management and equipment commissioning.',education:'Diploma in Mechanical Engineering, Technical University of Kenya.'},
+  {name:'Alex Kibe',role:'Project Supervisor, Solids Control',image:'alex-kibe',initials:'AK',experience:'5+ years in solids control and wellsite waste management',bio:'Project supervisor with additional experience in inventory management and field operations.',education:'Diploma in Aeronautical Engineering, Technical University of Kenya.'}
+];
+const sc=S.map(s=>`<div class="card"><div class="n">${s.n}</div><h3 style="font-size:20px">${s.t}</h3><p class="mu">${s.d}</p><a href="#services">View service →</a></div>`).join('');
+const wy=`<div class="grid3">${W.map(w=>`<div><h3 style="font-size:17px">${w[0]}</h3><p class="mu" style="margin:0">${w[1]}</p></div>`).join('')}</div>`;
+const pc=PR.map(p=>`<div class="card p">${P(p[3],170)}<div class="b"><div class="tag">${p[0]}</div><h3 style="font-size:18px;margin:4px 0">${p[1]}</h3><p class="mu" style="margin:0">${p[2]}</p></div></div>`).join('');
+const tc=(detailed=false)=>`<div class="team-grid${detailed?' detailed':''}">${T.map(t=>`<article class="card team-card">${t.image?P(t.image,230):`<div class="portrait-placeholder" role="img" aria-label="${t.name} portrait placeholder"><span>${t.initials}</span><small>Portrait coming soon</small></div>`}<div class="team-card-content"><div class="team-role">${t.role}</div><h3>${t.name}</h3><div class="team-experience">${t.experience}</div><p class="mu">${t.bio}</p>${detailed?`<div class="team-details"><b>Education</b><span>${t.education}</span></div>`:''}</div></article>`).join('')}</div>`;
+const ph=(t,s)=>`<div class="page-h"><div class="w"><h1>${t}</h1><p>${s}</p></div></div>`;
+const contact=`<section class="contact"><div class="w two" style="align-items:start"><div><h2>Let's talk about your energy project</h2><p>Tell us about your needs. Our team will respond with practical next steps.</p><p>Warehouse No. 8, Vipro Go-downs<br>Eastern Bypass (Corner), Ruiru, Kenya</p></div>
+<form onsubmit="event.preventDefault();this.innerHTML='<h3>Thank you!</h3><p>This is a demo form. Connect it to your email or form service to receive messages.</p>'"><label for="contact-name">Full name</label><input id="contact-name" name="name" autocomplete="name" required><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" autocomplete="email" required><label for="contact-message">Tell us about your project</label><textarea id="contact-message" name="message" rows="4"></textarea><br><br><button class="btn" type="submit" style="width:100%">Send Message</button></form></div></section>`;
+const R={
+home:()=>`<div class="hero"><div class="w g"><div><div class="eyebrow">Energy · Petroleum · Consulting</div><h1>Practical energy solutions for Kenya's petroleum sector</h1><p>Sirius Energy Solutions Limited provides technical and business consulting and support services from our base in Ruiru, Kenya.</p><p><a class="btn" href="#contact">Request a Consultation</a> <a class="btn o" href="#services">Explore Our Services</a></p></div>${P('hero-energy-site',360)}</div></div>
+<div class="stats"><div class="w"><div><b>Kenya-registered</b><span>Limited company</span></div><div><b>Petroleum sector</b><span>Technical and business focus</span></div><div><b>3 service areas</b><span>Consulting, energy, operations</span></div><div><b>Ruiru base</b><span>Eastern Bypass, Kenya</span></div></div></div>
+<section><div class="w two">${P('team-on-site',320)}<div><h2>Technical insight and business know-how in one team</h2><p>We combine technical and business knowledge of the petroleum sector to help clients pursue opportunities and run their operations with confidence.</p><a href="#about"><b>Learn more about us →</b></a></div></div></section>
+<section class="s"><div class="w"><h2>What we do</h2><p class="mu">Consulting, energy solutions and operations support.</p><br><div class="grid3">${sc}<div class="cta"><h3>Not sure where to start?</h3><p>Tell us about your project and our team will respond with practical next steps.</p><a class="btn" href="#contact">Talk to an expert</a></div></div></div></section>
+<section><div class="w"><h2>Why choose Sirius</h2><br>${wy}</div></section>
+<section class="s"><div class="w"><h2>Featured projects</h2><br><div class="grid3">${pc}</div><p><a href="#projects"><b>See all projects →</b></a></p></div></section>
+<section><div class="w"><h2>The people behind every project</h2><p class="mu">Experienced professionals across technical, business and operations roles.</p><br>${tc()}<p><a href="#team"><b>Meet the full team →</b></a></p></div></section>${contact}`,
+about:()=>ph('About Sirius','A Kenyan energy consultancy serving the petroleum sector.')+`<section><div class="w two"><div><h2>Company overview</h2><p>Sirius Energy Solutions Limited is a company incorporated under the laws of Kenya, with its registered address at Warehouse No. 8, Vipro Go-downs, Eastern Bypass (Corner), Ruiru.</p><p>Our team brings together petroleum-sector operations, logistics and supply chain, technical field services, HSE and environmental management, and business development.</p></div>${P('team-on-site',300)}</div></section>
+<section class="s"><div class="w grid2"><div class="card"><h3>Technical depth</h3><p>Our experience spans solids control, drilling-waste management, water engineering, energy and environmental management, and field operations.</p></div><div class="card"><h3>Practical delivery</h3><p>Operations, project supervision, logistics and supply-chain experience help translate technical plans into safe, coordinated work on the ground.</p></div></div></section>
+<section><div class="w"><h2>Our values</h2><br><div class="grid4">${['Confidentiality','Professionalism','Technical excellence','Client focus'].map(c=>`<div class="card"><b>${c}</b></div>`).join('')}</div></div></section>
+<section class="s"><div class="w"><h2>Why choose Sirius</h2><br>${wy}</div></section>`,
+services:()=>ph('Our Services','Three service areas delivered by one dedicated team.')+S.map((s,i)=>`<section class="${i%2?'s':''}"><div class="w two">${i%2?'':P('service-'+['petroleum-consulting','energy-solutions','operations-support'][i],300)}<div><div class="eyebrow" style="color:var(--ac)">${s.n}</div><h2>${s.t}</h2><p class="mu">${s.d}</p><ul class="list">${s.l.map(x=>`<li>${x}</li>`).join('')}</ul><p><a class="btn" href="#contact">Request a Quote</a></p></div>${i%2?P('service-'+['petroleum-consulting','energy-solutions','operations-support'][i],300):''}</div></section>`).join('')+contact,
+projects:()=>ph('Selected Experience','Relevant project experience from across our team.')+`<section><div class="w"><p class="project-note">The examples below describe experience gained by individual team members in previous roles; they are not presented as Sirius-delivered client engagements.</p><div class="grid3">${pc}</div></div></section>`+contact,
+team:()=>ph('Our Team','Meet the leaders and specialists bringing technical, operations and business expertise to Sirius.')+`<section><div class="w">${tc(true)}</div></section>`+contact,
+contact:()=>ph('Contact Us','We respond with practical next steps.')+contact};
+const N=['home','about','services','projects','team'];
+function go(){const h=(location.hash||'#home').slice(1);const k=R[h]?h:'home';
+document.getElementById('app').innerHTML=R[k]();
+document.getElementById('nav').innerHTML=N.map(n=>`<a href="#${n}" class="${n==k?'on':''}">${n[0].toUpperCase()+n.slice(1)}</a>`).join('')+'<a href="#contact" class="btn">Request a Quote</a>';
+window.scrollTo(0,0)}
+addEventListener('hashchange',go);go();
+</script>
+</body>
+</html>
