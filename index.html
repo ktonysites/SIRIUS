@@ -19,7 +19,18 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0
 .top{background:var(--dk);color:#fff;font-size:13px;padding:8px 0}.top .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
 header{background:var(--bg);border-bottom:3px solid var(--or);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
 header .w{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap;gap:10px}
-.logo{font:700 22px Georgia,serif;color:var(--hd);text-decoration:none}.logo small{display:block;font:11px system-ui;letter-spacing:.12em;color:var(--mu)}.logo i{color:var(--or);font-style:normal}
+.logo{display:inline-flex;align-items:center;gap:9px;text-decoration:none;flex:none}.logo img{display:block;width:48px;height:48px;object-fit:contain}
+.brand-copy{display:flex;flex-direction:column;line-height:1}.brand-name{color:#f27613;font:800 25px/1 Manrope,"Segoe UI",sans-serif;letter-spacing:-.065em;font-style:italic}.brand-tagline{margin-top:4px;color:var(--tx);font:700 11px/1.1 Manrope,"Segoe UI",sans-serif;letter-spacing:-.025em;font-style:italic}
+.loader{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:linear-gradient(145deg,#fffaf6,#fff0e4);opacity:1;visibility:visible;transition:opacity .35s ease,visibility .35s ease}
+.loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.loader-content{display:grid;justify-items:center;gap:22px}
+.loader-brand{display:flex;align-items:center;gap:14px;animation:logo-arrive .7s ease both}
+.loader-brand img{display:block;width:78px;height:78px;object-fit:contain}
+.loader-brand .brand-name{font-size:clamp(36px,9vw,48px)}
+.loader-brand .brand-tagline{font-size:15px;margin-top:7px}
+.loader-indicator{width:42px;height:42px;border:3px solid #f4d5bd;border-top-color:var(--or);border-radius:50%;animation:loader-spin .8s linear infinite}
+@keyframes logo-arrive{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes loader-spin{to{transform:rotate(360deg)}}
 nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}nav a{color:var(--tx);text-decoration:none;font-weight:500;font-size:15px}nav a.on{color:var(--ac)}
 .btn{display:inline-block;background:var(--ac);color:#fff!important;padding:11px 20px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--ac);cursor:pointer;font-size:15px}
 .hero .btn{background:var(--dk);border-color:var(--dk)}.hero .btn.o{background:transparent;border-color:#fff}
@@ -97,8 +108,9 @@ input,textarea{margin-top:3px}
 input:focus,textarea:focus{outline:3px solid rgba(232,101,10,.2);border-color:var(--or)}
 footer{background:#160b04}
 @media(max-width:800px){.hero .image-frame{min-height:270px}.stats .w>div{padding:8px 12px}}
-@media(max-width:560px){.w{padding-left:18px;padding-right:18px}.top .w{font-size:12px}header .w{align-items:flex-start}.logo{font-size:20px}nav{gap:10px}nav a{font-size:13px}.hero .btn{margin-bottom:8px}.stats .w,.grid4{gap:14px}.stats b{font-size:18px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+@media(max-width:560px){.w{padding-left:18px;padding-right:18px}.top .w{font-size:12px}header .w{align-items:flex-start}.logo img{width:42px;height:42px}.brand-name{font-size:23px}nav{gap:10px}nav a{font-size:13px}.hero .btn{margin-bottom:8px}.stats .w,.grid4{gap:14px}.stats b{font-size:18px}}
+@media(max-width:380px){.loader-brand{gap:8px}.loader-brand img{width:58px;height:58px}.loader-brand .brand-name{font-size:34px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 .team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .team-grid.detailed{grid-template-columns:repeat(3,minmax(0,1fr))}
 .team-card{padding:0;overflow:hidden;display:flex;flex-direction:column;border-top:0}
@@ -123,9 +135,12 @@ footer{background:#160b04}
 </style>
 </head>
 <body>
+<div class="loader" id="loader" role="status" aria-label="Loading Sirius Energy Solutions">
+<div class="loader-content"><div class="loader-brand"><img src="sirius-mark.png" alt=""><span class="brand-copy"><span class="brand-name">Sirius</span><span class="brand-tagline">Energy Solutions</span></span></div><span class="loader-indicator" aria-hidden="true"></span></div>
+</div>
 <div class="top"><div class="w"><span>Warehouse No. 8, Vipro Go-downs, Eastern Bypass (Corner), Ruiru, Kenya</span><span>Petroleum · Energy · Operations</span></div></div>
 <header><div class="w">
-<a class="logo" href="#home">Sirius <i>Energy</i> Solutions<small>LIMITED</small></a>
+<a class="logo" href="#home" aria-label="Sirius Energy Solutions Limited home"><img src="sirius-mark.png" alt=""><span class="brand-copy"><span class="brand-name">Sirius</span><span class="brand-tagline">Energy Solutions</span></span></a>
 <nav id="nav"></nav></div></header>
 <main id="app"></main>
 <footer><div class="w"><div><b style="color:#fff">Sirius Energy Solutions Limited</b><br>Technical and business consulting for the petroleum sector<br><br>© 2026 Sirius Energy Solutions Limited. All rights reserved.</div>
@@ -141,12 +156,9 @@ const IMAGES={
   'wind-farm-experience':{file:'wind-farm-experience.jpg',url:'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1000&q=85',alt:'Wind turbines across an open field at sunset'},
   'project-3':{file:'project-3.jpg',url:'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85',alt:'Commercial infrastructure project'},
   'ruto-lyoba':{file:'SES-Ruto-Lyoba.jpg',url:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85',alt:'Ruto Lyoba, Managing Director'},
-  'albert-onyango':{file:'SES-Albert-Onyango.jpg',url:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85',alt:'Albert J. Onyango, Operations Director'},
   'peter-muiruri':{file:'SES-Peter-Muiruri.jpg',url:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85',alt:'Peter Muiruri, Technical Director'},
   'malcolm-marega':{file:'SES-Malcolm-Marega.jpg',url:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85',alt:'Malcolm Marega, Business Development Manager'},
   'nickson-daudi':{file:'SES-Nickson-Daudi.jpg',url:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85',alt:'Nickson Daudi, Technical Lead for Solids Control'},
-  'noah-abdalla':{file:'SES-Noah-Abdalla-Web-Profile-Photo-e1571387830908.jpg',url:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85',alt:'Noah M. Abdalla, Project Supervisor for Solids Control'},
-  'alex-kibe':{file:'SES-Alex-Kibe.jpg',url:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85',alt:'Alex Kibe, Project Supervisor for Solids Control'}
 };
 function imageFallback(img){
   if(!img.dataset.fallbackTried){img.dataset.fallbackTried='true';img.src=img.dataset.fallback;return}
@@ -159,19 +171,15 @@ const S=[
 {n:'03',t:'Operations, Logistics & HSE',d:'Practical coordination for projects that depend on safe operations, supply-chain planning and dependable delivery.',l:['Transport and supply-chain planning','Port-to-site logistics and customs coordination','Project supervision and inventory management','Health, safety and environmental management']}];
 const W=[['Sector expertise','Technical and business insight into the petroleum sector.'],['Confidential by design','Client information is handled with strict discretion.'],['Practical delivery','Solutions built for real operating conditions.'],['Kenyan-based','Registered in Kenya with a base in Ruiru.'],['Client-focused','We start from your goals and work back.'],['Flexible engagement','Advisory, project or ongoing support models.']];
 const PR=[
-  ['Selected team experience · 2016–17','Lake Turkana wind farm logistics','A.J. Onyango oversaw end-to-end transport logistics, customs compliance and in-country budget for components used to install 365 turbines.','wind-farm-experience'],
-  ['Selected team experience · Kenya','Oilfield service logistics','A.J. Onyango helped design and execute oilfield logistics plans, coordinating port-to-site delivery for multiple service lines and operators.','project-1'],
+  ['Selected team experience · 2016–17','Lake Turkana wind farm logistics','A team member oversaw end-to-end transport logistics, customs compliance and in-country budget for components used to install 365 turbines.','wind-farm-experience'],
+  ['Selected team experience · Kenya','Oilfield service logistics','A team member helped design and execute oilfield logistics plans, coordinating port-to-site delivery for multiple service lines and operators.','project-1'],
   ['Selected team experience · Kenya','Wellsite solids control','The team profiles document solids-control, drilling-waste management and operations experience across Turkana and Lamu projects.','project-3']
 ];
 const T=[
   {name:'Ruto Lyoba',role:'Managing Director',image:'ruto-lyoba',initials:'RL',experience:'25+ years in the industry',bio:'Mechanical engineer and energy-sector leader with experience at ExxonMobil in Belgium and Ghana, Total and National Oilwell Varco.',education:'BSc Mechanical Engineering (Hons), University of Nairobi; enterprise leadership training, INSEAD.'},
-  {name:'Albert J. Onyango',role:'Operations Director',image:'albert-onyango',initials:'AO',experience:'20+ years in logistics and supply chain',bio:'Led logistics for the delivery of components for 365 Lake Turkana wind turbines, including end-to-end transport, customs compliance and budget oversight.',education:'BA, University of Nairobi; postgraduate diploma in Operations and Supply Chain Management, University of Liverpool.'},
   {name:'Peter Muiruri',role:'Technical Director',image:'peter-muiruri',initials:'PM',experience:'10+ years across water and field engineering',bio:'Technical experience spans mud engineering, solids-control equipment, borehole drilling, water engineering, development and environmental impact assessment.',education:'MSc Water Resources and Environmental Management, University of Twente; BSc Water Engineering (Hons), Kenyatta University.'},
-  {name:'Brenda Omuombo',role:'HSE Advisor',initials:'BO',experience:'6+ years in HSE and environmental management',bio:'HSE and environmental management professional with experience including an HSE advisory role with Tullow Oil BV.',education:'MSc Energy and Environmental Management, University of Abertay Dundee; BSc Environmental Science, Maseno University.'},
   {name:'Malcolm Marega',role:'Business Development Manager',image:'malcolm-marega',initials:'MM',experience:'15+ years in business development and management',bio:'Experience includes business development, SME development and renewable energy in the UK.',education:'BA Business Management (UK).'},
   {name:'Nickson Daudi',role:'Technical Lead, Solids Control',image:'nickson-daudi',initials:'ND',experience:'Experienced oilfield and solids-control specialist',bio:'Specialises in drilling-waste management, filtration, solids-control equipment maintenance and dewatering. His project experience includes wellsite work in Turkana and Lamu.',education:'Diploma in Chemical and Process Engineering, Technical University of Kenya.'},
-  {name:'Noah M. Abdalla',role:'Project Supervisor, Solids Control',image:'noah-abdalla',initials:'NA',experience:'6+ years in operations and maintenance',bio:'Mechanical engineering technician with oil-and-gas, thermal-power and food-processing experience, including solids control, drill-waste management and equipment commissioning.',education:'Diploma in Mechanical Engineering, Technical University of Kenya.'},
-  {name:'Alex Kibe',role:'Project Supervisor, Solids Control',image:'alex-kibe',initials:'AK',experience:'5+ years in solids control and wellsite waste management',bio:'Project supervisor with additional experience in inventory management and field operations.',education:'Diploma in Aeronautical Engineering, Technical University of Kenya.'}
 ];
 const sc=S.map(s=>`<div class="card"><div class="n">${s.n}</div><h3 style="font-size:20px">${s.t}</h3><p class="mu">${s.d}</p><a href="#services">View service →</a></div>`).join('');
 const wy=`<div class="grid3">${W.map(w=>`<div><h3 style="font-size:17px">${w[0]}</h3><p class="mu" style="margin:0">${w[1]}</p></div>`).join('')}</div>`;
@@ -202,6 +210,7 @@ document.getElementById('app').innerHTML=R[k]();
 document.getElementById('nav').innerHTML=N.map(n=>`<a href="#${n}" class="${n==k?'on':''}">${n[0].toUpperCase()+n.slice(1)}</a>`).join('')+'<a href="#contact" class="btn">Request a Quote</a>';
 window.scrollTo(0,0)}
 addEventListener('hashchange',go);go();
+setTimeout(()=>document.getElementById('loader').classList.add('is-hidden'),1000);
 </script>
 </body>
 </html>
